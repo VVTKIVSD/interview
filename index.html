@@ -1,0 +1,108 @@
+d>
+      <style>
+        body {
+          background-color: #f9f9f9;
+        }
+        .Article {
+          font: 18px Palatino,Palatino Linotype,Georgia,Times,Times New Roman,serif;
+          margin: 0 auto 20px;
+          padding: 40px 50px 60px;
+          position: relative;
+          text-rendering: optimizelegibility;
+          width: 950px;
+        }
+        .Article-Body {
+          width: 650px;
+        }
+        .Article h2 {
+          color: #585f61;
+          font-size: 22px;
+          line-height: 50px;
+          border-top: 2px solid #dfe0e0;
+          margin: 20px -20px 0;
+          padding: 0 0 0 20px;
+        }
+        .Article p {
+          line-height: 1.6em;
+          padding: 10px 0;
+        }
+        pre code {
+          display: block;
+          overflow: auto;
+          padding: 20px;
+        }
+        .hljs-number {
+          color: teal;
+        }
+        code {
+          background: #fff;
+          font: 14px/20px Fira Code,DejaVu Sans Mono,Bitstream Vera Sans Mono,Menlo,Monaco,Consolas,Andale Mono,Lucida Sans Typewriter,Lucida Console,Courier New,monospace!important;
+          padding: 4px 6px;
+          white-space: pre-wrap;
+        }
+      </style>
+  </head>
+<body>
+  <div class="Article">
+    <div class="Article-Body">
+      <h2>Coding</h2>
+      <p>Implement the following functions (tests follow each question):</p>
+      <ol>
+        <li>
+          <p>
+            <code>filter</code>" - Implement the "
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter"><code>filter</code></a>
+            function.
+          </p>
+          <pre>
+            <code class="language-js">filter([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], n =&gt; n &lt; <span class="hljs-number">3</span>)    <span class="hljs-comment">// [1, 2]</span></code>
+        </pre>
+        </li>
+        <li>
+            <p><code>reduce</code> - Implement the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><code>reduce</code></a> function.</p>
+            <pre><code class="language-js">reduce([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], (a, b) =&gt; a + b, <span class="hljs-number">0</span>) <span class="hljs-comment">// 10</span>
+            </code></pre>
+        </li>
+      </ol>
+      <h2>Debugging</h2>
+      <p>For each of the following questions, start by understanding and explaining why the given piece of code doesn’t work. Then propose a couple of fixes, and rewrite the code to implement one of the fixes you proposed so the program works correctly:</p>
+      <ol>
+          <li>
+            <p>I want this code to log out the numbers <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> in that order, but it doesn’t do what I expect (this is a bug you run into once in a while, and some people love to ask about it in interviews).</p>
+            <pre><code class="language-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(i), <span class="hljs-number">0</span>)
+}
+            </code></pre>
+          </li>
+          <li>
+              <p>I want this code to log out <code>"doggo"</code>, but it logs out <code>undefined</code>!</p>
+              <pre><code class="language-js"><span class="hljs-keyword">let</span> dog = {
+            <span class="hljs-attr">name</span>: <span class="hljs-string">'doggo'</span>,
+            sayName() {
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)
+            }
+          }
+          <span class="hljs-keyword">let</span> sayName = dog.sayName
+          sayName()
+            </code></pre>
+          </li>
+          <li>
+              <p>Why does this code return the results that it does?</p>
+              <pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isBig</span>(<span class="hljs-params">thing</span>) </span>{
+  <span class="hljs-keyword">if</span> (thing == <span class="hljs-number">0</span> || thing == <span class="hljs-number">1</span> || thing == <span class="hljs-number">2</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+isBig(<span class="hljs-number">1</span>)    <span class="hljs-comment">// false</span>
+isBig([<span class="hljs-number">2</span>])  <span class="hljs-comment">// false</span>
+isBig([<span class="hljs-number">3</span>])  <span class="hljs-comment">// true</span>
+              </code></pre>
+          </li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>
+
